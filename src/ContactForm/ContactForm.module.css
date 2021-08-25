@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px 10px;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 1px solid #ff6b0a;
+  align-items: center;
+}
+
+.input {
+  width: 80%;
+  border-radius: 5%;
+  margin: 10px;
+  height: 20px;
+}
