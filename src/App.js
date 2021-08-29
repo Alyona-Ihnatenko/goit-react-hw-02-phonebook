@@ -15,12 +15,18 @@ class App extends react.Component {
     filter: '',
   };
 
-  addContact = contact => {
-    if (this.sameName(contact)) {
-      return;
+  addContact = newContact => {
+    const { contacts } = this.state;
+    const sameName = contacts.some(
+      contact =>
+        contact.name.toLocaleLowerCase() ===
+        newContact.name.toLocaleLowerCase(),
+    );
+    if (sameName) {
+      alert(`${newContact.name}  already exists`);
     } else {
       this.setState(prevState => ({
-        contacts: [contact, ...prevState.contacts],
+        contacts: [newContact, ...prevState.contacts],
       }));
     }
   };
